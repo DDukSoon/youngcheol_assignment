@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youngcheol's House</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Home 섹션을 초기에 보이도록 설정
+      $("#home").show();
+      
+      $(".nav-link").click(function(e) {
+        e.preventDefault();
+        var section = $(this).data("section");
+        $(".content").hide();
+        $("#" + section).show();
+      });
+    });
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      background-color: gray;
+      color: white;
+      padding: 10px 30px 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 10px;
+    }
+    nav ul li:first-child {
+      margin-left: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    img{float:left}
+    .content {
+      margin-top: 20px;
+      display: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: lightgray;
+    }
+    .time {
+     width: 10%;
+    }
+    .subject {
+      width: 18%;
+    }
+    td:not(:empty) {
+      background-color: lightgray;
+    }
+    p {
+      font-size: 25px;
+    }
+    img{
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wonderful Days</h1>
+    <nav>
+      <ul>
+        <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-section="MyTreasure">My Treasure</a></li>
+        <li><a href="#" class="nav-link" data-section="timetable">Time Table</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <div id="home" class="content">
+      <h1>Home</h1>
+      <img src="./사진/자전거타는사진.jpg" width="400">
+      <p>안녕하세요! 저의 웹 하우스에 방문을 환영합니다. 저는 강원대학교 컴퓨터 공학과에 재학 중인 황영철입니다. 올해 복학하여 2학년으로 열정만큼은 신입생 이상이라 자부합니다. <br>
+      저는 자전거 라이딩과 런닝을 즐깁니다. 주위 풍경들을 감상하며 땀을 흘리는 것이 건강을 챙기고 스트레스 해소에 도움이 되어 꾸준히 하고 있습니다. <br>
+      좋아하는 음식으로는 떡볶이와 치킨이 있습니다. 맵고 달달한 떡볶이에 순대나 튀김을 먹으면 그 하루는 성공한 하루가 되는 기분이고, 치킨은 먹고나면 죄책감은 들지만 한 조각 넣을 때 만큼은 세상을 다 가진기분이기 때문입니다. 
+      </p>
+      
+    </div>
+    <div id="MyTreasure" class="content">
+      <h1>My Treasure</h1>
+      <img src="./사진/자전거 사진.jpg" width="400">
+      <p>제가 가장 소중하게 여기는 자전거들입니다. 우선 빨간색 자전거부터 말씀드릴 것 같으면, 고등학교 2학년부터 등굣길을 책임지고, 국토종주를 2회 함께한 애착 자전거입니다. 
+        이 자전거와는 많은 추억이 있는데 개시한 첫 날 사고가 나버려 더욱더 기억에 남는거 갔습니다. 손목과 얼굴이 다 쓸리고 아팠지만 그렇기에 강렬한 신고식을 치뤘다고 지금에서는 생각하고있습니다.
+      그리고 저의 고등학교 2학년 여름방학 저 혼자만의 첫 여행이라 할 수 있는 인천~부산 국토종주는 생각하고 1주일만에 바로 출발을 했습니다. 그만큼 힘든일도 많았고, 고등학생이라 제약도 많았지만, 도로위에 많은 인연을 
+      만나고 저 자신도 되돌아 볼 수 있는 뜻깊은 여행이었습니다. 그리고 두번째는 입대 전 친구들과 국토종주입니다. 입대 전에 살이 너무 쪄서 원래 목표로 했던 부산까지는 도착하지 못했어서 아쉬움이 남았습니다.
+      <br> 그리고 앞의 검은색과 파란색이 섞인 자전거는 최근에 추억을 만들어나가고 있는 자전거입니다. 빠른 속도를 위해 1대를 당근했습니다. 꾸준히 타서 더 좋은 추억 만들기위해 노력하겠습니다. </p>
+      
+    </div>
+    <div id="timetable" class="content">
+      <h1>24년도 1학기 시간표</h1>
+      <p>이번 학기 시간표입니다. 원하던 금공강은 만들지 못했지만, 듣고 싶은 과목을 모두 들을 수 있어 최고의 시간표입니다.</p>
+      <table>
+        <thead>
+            <tr>
+                <th class="time">시간</th>
+                <th class="subject">월요일</th>
+                <th class="subject">화요일</th>
+                <th class="subject">수요일</th>
+                <th class="subject">목요일</th>
+                <th class="subject">금요일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>09:00 - 10:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:00</td>
+                <td rowspan="2">자료구조</td>
+                <td></td>
+                <td></td>
+                <td rowspan="2">자료구조</td>
+                <td rowspan="2">웹프로그래밍</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:00</td>
+                <!-- -->
+                <td rowspan="2">웹프로그래밍</td>
+                <td></td>
+                <!-- -->
+                <!-- -->
+            </tr>
+            <tr>
+                <td>12:00 - 13:00</td>
+                <td rowspan="2">선형대수학</td>
+                <!-- -->
+                <td></td>
+                <td rowspan="2">선형대수학</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13:00 - 14:00</td>
+                <!--선형대수 -->
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:00</td>
+                <td></td>
+                <td rowspan="3">창의비판적사고</td>
+                <td></td>
+                <td></td>
+                <td rowspan="3">논리회로</td>
+                
+            </tr>
+            <tr>
+                <td>15:00 - 16:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16:00 - 17:00</td>
+                <td rowspan="2">리눅스프로그래밍</td>
+                <td></td>
+                <td rowspan="2">리눅스프로그래밍</td>
+            </tr>
+            <tr>
+                <td>17:00 - 18:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
+</body>
+</html>
